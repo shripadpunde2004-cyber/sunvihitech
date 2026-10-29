@@ -1,0 +1,122 @@
+/* ========================================
+   Hero Section Styles
+   ======================================== */
+
+.hero {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  background-color: #f0ebe0;
+  overflow: hidden;
+}
+
+/* Warm-toned background image – worker silhouette on right */
+.bgImage {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to right,
+      rgba(240, 235, 224, 0.95) 45%,
+      rgba(240, 235, 224, 0.55) 70%,
+      rgba(240, 235, 224, 0.2) 100%
+    ),
+    url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=80&fit=crop&crop=right')
+      center right / cover no-repeat;
+}
+
+/* Subtle overlay for consistency */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(240, 235, 224, 0.15);
+  z-index: 1;
+}
+
+/* Content sits above overlays */
+.content {
+  position: relative;
+  z-index: 2;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.textBlock {
+  max-width: 620px;
+  animation: fadeInUp 0.7s ease both;
+}
+
+.heading {
+  font-size: clamp(1.75rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.2;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+}
+
+.subtext {
+  font-size: 1rem;
+  color: var(--color-text-body);
+  margin-bottom: 36px;
+  max-width: 480px;
+  line-height: 1.65;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ─── Animations ────────────────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── Responsive ────────────────────────── */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 360px;
+  }
+
+  .bgImage {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(240, 235, 224, 0.98) 60%,
+        rgba(240, 235, 224, 0.7) 100%
+      ),
+      url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=70&fit=crop')
+        center center / cover no-repeat;
+  }
+
+  .content {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .textBlock {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .subtext {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+}

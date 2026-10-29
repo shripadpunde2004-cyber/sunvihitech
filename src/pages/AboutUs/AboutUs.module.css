@@ -1,0 +1,485 @@
+/* ========================================================
+   About Us Page Styles - Pixel-Perfect & High Code Quality
+   ======================================================== */
+
+.page {
+  background-color: #ffffff;
+  color: var(--color-text-dark, #1a1a2e);
+  font-family: var(--font-family, 'Inter', sans-serif);
+  overflow-x: hidden;
+}
+
+/* ────────────────────────────────────────────────────────
+   1. HERO SECTION
+   ──────────────────────────────────────────────────────── */
+.heroSection {
+  background: linear-gradient(180deg, #fbf8fe 0%, #f7f3fd 100%);
+  padding: 80px 0 70px;
+  position: relative;
+}
+
+.heroContent {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.heroHeading {
+  font-size: clamp(2.3rem, 4.5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  color: #111827;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+}
+
+.highlightPink {
+  color: #ec4899;
+}
+
+.highlightPurple {
+  color: #9333ea;
+  display: block;
+}
+
+.heroSubtitle {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: #4b5563;
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 50px;
+  line-height: 1.65;
+}
+
+/* Two Cards Grid: Our Mission & Our Vision */
+.missionVisionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.mvCard {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 36px 32px 30px;
+  border: 1px solid #f1e9fa;
+  box-shadow: 0 10px 30px rgba(91, 31, 138, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-base, 0.25s ease), box-shadow var(--transition-base, 0.25s ease);
+}
+
+.mvCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(91, 31, 138, 0.1);
+  border-color: #d8b4fe;
+}
+
+.mvIconWrap {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.missionIcon {
+  background: #a855f7;
+}
+
+.visionIcon {
+  background: #ec4899;
+}
+
+.mvTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.mvDesc {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.65;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.mvLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #9333ea;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: gap 0.2s ease, color 0.2s ease;
+  width: fit-content;
+}
+
+.mvLink:hover {
+  gap: 10px;
+  color: #7e22ce;
+}
+
+/* ────────────────────────────────────────────────────────
+   2. OUR STORY SECTION
+   ──────────────────────────────────────────────────────── */
+.storySection {
+  padding: 90px 0;
+  background: #ffffff;
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.storyTitle {
+  font-size: clamp(1.85rem, 3.2vw, 2.35rem);
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.25;
+  margin-bottom: 26px;
+  letter-spacing: -0.5px;
+}
+
+.storyParagraph {
+  font-size: 1rem;
+  color: #374151;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+.storyImageWrapper {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  border: 1px solid #f1f5f9;
+}
+
+.storyImage {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.storyImageWrapper:hover .storyImage {
+  transform: scale(1.02);
+}
+
+/* ────────────────────────────────────────────────────────
+   3. OUR CORE VALUES SECTION
+   ──────────────────────────────────────────────────────── */
+.valuesSection {
+  padding: 85px 0 95px;
+  background: #faf8fc;
+}
+
+.sectionHeader {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 52px;
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 3.5vw, 2.45rem);
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.sectionSubtitle {
+  font-size: 1.05rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.valueCard {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px 24px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.valueCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(91, 31, 138, 0.09);
+  border-color: #e9d5ff;
+}
+
+.valueIconWrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.valIconEthical {
+  background: #9333ea;
+}
+
+.valIconWorker {
+  background: #ec4899;
+}
+
+.valIconQuality {
+  background: #8b5cf6;
+}
+
+.valIconGlobal {
+  background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+}
+
+.valueTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.valueDesc {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* ────────────────────────────────────────────────────────
+   4. OUR RECRUITMENT PROCESS SECTION
+   ──────────────────────────────────────────────────────── */
+.processSection {
+  padding: 95px 0 85px;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle corner circle decors */
+.decorTopLeft {
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: #fce7f3;
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+.decorBottomRight {
+  position: absolute;
+  bottom: -70px;
+  right: -60px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: #f3e8ff;
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+.processTimelineWrapper {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 48px;
+}
+
+/* Connecting bar behind cards */
+.timelineBar {
+  position: absolute;
+  top: -1px;
+  left: 8%;
+  right: 8%;
+  height: 3px;
+  background: #ede9fe;
+  z-index: 1;
+}
+
+.processGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+.stepCard {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 38px 20px 24px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stepCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(91, 31, 138, 0.08);
+  border-color: #d8b4fe;
+}
+
+.stepBadge {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #c026d3;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 10px rgba(192, 38, 211, 0.35);
+  border: 2px solid #ffffff;
+}
+
+.stepTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+  margin-top: 4px;
+}
+
+.stepDesc {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.stepTime {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ec4899;
+  background: #fdf2f8;
+  padding: 4px 10px;
+  border-radius: var(--radius-full, 9999px);
+}
+
+.clockIcon {
+  width: 13px;
+  height: 13px;
+}
+
+/* Highlight pill banner */
+.guidanceBanner {
+  background: #fdf4ff;
+  border: 1.5px solid #f5d0fe;
+  border-radius: 14px;
+  padding: 16px 28px;
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto;
+  color: #86198f;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 2px 10px rgba(192, 38, 211, 0.05);
+}
+
+.bulbIcon {
+  font-size: 1.15rem;
+}
+
+/* ────────────────────────────────────────────────────────
+   RESPONSIVE MEDIA QUERIES
+   ──────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .valuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .processGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px 18px;
+  }
+
+  .timelineBar {
+    display: none;
+  }
+}
+
+@media (max-width: 820px) {
+  .storyGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .storyImage {
+    height: 320px;
+  }
+
+  .missionVisionGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .processGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .stepCard {
+    padding-top: 32px;
+  }
+}
+
+@media (max-width: 540px) {
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .guidanceBanner {
+    padding: 14px 18px;
+    font-size: 0.875rem;
+  }
+}

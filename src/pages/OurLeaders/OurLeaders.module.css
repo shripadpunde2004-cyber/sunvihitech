@@ -1,0 +1,524 @@
+/* ========================================================
+   Our Leaders Page Styles - Pixel-Perfect & Proper Code Quality
+   ======================================================== */
+
+.page {
+  background-color: #ffffff;
+  color: var(--color-text-dark, #1a1a2e);
+  font-family: var(--font-family, 'Inter', sans-serif);
+  overflow-x: hidden;
+  padding-bottom: 60px;
+}
+
+/* ────────────────────────────────────────────────────────
+   1. PAGE HEADER
+   ──────────────────────────────────────────────────────── */
+.pageHeader {
+  padding: 70px 0 40px;
+  text-align: center;
+}
+
+.pageTitle {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.titleUnderline {
+  width: 44px;
+  height: 3px;
+  background: linear-gradient(90deg, #9333ea, #ec4899);
+  border-radius: 2px;
+  margin: 0 auto 14px;
+}
+
+.pageSubtitle {
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  color: #64748b;
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ────────────────────────────────────────────────────────
+   2. BOARD OF DIRECTORS SECTION
+   ──────────────────────────────────────────────────────── */
+.directorsSection {
+  padding: 30px 0 70px;
+  text-align: center;
+}
+
+.sectionHeader {
+  margin-bottom: 44px;
+}
+
+.sectionTitleWithIcon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.sectionIcon {
+  color: #9333ea;
+}
+
+.sectionSubtitle {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.directorsGrid {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+.directorCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+  font-family: inherit;
+}
+
+.directorCard:hover {
+  transform: translateY(-5px);
+}
+
+.directorAvatarWrapper {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: #faf5ff;
+  border: 2px solid #f3e8ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 28px rgba(147, 51, 234, 0.08);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.directorCard:hover .directorAvatarWrapper {
+  box-shadow: 0 14px 34px rgba(147, 51, 234, 0.16);
+  border-color: #d8b4fe;
+}
+
+.avatarIcon {
+  color: #a855f7;
+}
+
+.photoPlaceholderText {
+  font-size: 0.775rem;
+  color: #94a3b8;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.directorBadge {
+  position: absolute;
+  bottom: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: linear-gradient(90deg, #9333ea 0%, #ec4899 100%);
+  color: #ffffff;
+  padding: 4px 14px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(147, 51, 234, 0.3);
+  white-space: nowrap;
+}
+
+.directorName {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.directorRole {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #9333ea;
+  margin-bottom: 6px;
+}
+
+.directorActionText {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  transition: color 0.2s ease;
+}
+
+.directorCard:hover .directorActionText {
+  color: #9333ea;
+}
+
+/* ────────────────────────────────────────────────────────
+   3. MANAGEMENT TEAM SECTION
+   ──────────────────────────────────────────────────────── */
+.managementSection {
+  padding: 20px 0 80px;
+}
+
+.managementGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.managementCard {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px 24px 20px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  min-height: 270px;
+}
+
+.managementCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(91, 31, 138, 0.08);
+  border-color: #e9d5ff;
+}
+
+.cardTopRow {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.cardAvatarBox {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  background: #faf5ff;
+  border: 1px solid #f3e8ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a855f7;
+  flex-shrink: 0;
+}
+
+.cardTitleCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.cardDesignation {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #7e22ce;
+  line-height: 1.3;
+}
+
+.cardTagPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  background: #faf5ff;
+  border: 1px solid #f3e8ff;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #9333ea;
+}
+
+.pinIcon {
+  width: 12px;
+  height: 12px;
+}
+
+.cardDesc {
+  font-size: 0.875rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.cardChipRow {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.chip {
+  padding: 4px 10px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+.cardFooterLink {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.managementCard:hover .cardFooterLink {
+  color: #9333ea;
+}
+
+/* ────────────────────────────────────────────────────────
+   4. HIGHLIGHTS / STATS SECTION
+   ──────────────────────────────────────────────────────── */
+.highlightsSection {
+  padding: 40px 0 60px;
+  background: #ffffff;
+}
+
+.highlightsTitle {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #111827;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: -0.3px;
+}
+
+.highlightsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  text-align: center;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.highlightItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.highlightIconBadge {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #f5f3ff;
+  border: 1px solid #ede9fe;
+  color: #9333ea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 12px rgba(147, 51, 234, 0.06);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.highlightItem:hover .highlightIconBadge {
+  transform: translateY(-3px);
+  background: #ede9fe;
+}
+
+.highlightLabel {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.highlightSubtext {
+  font-size: 0.825rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* ────────────────────────────────────────────────────────
+   5. INTERACTIVE PROFILE MODAL
+   ──────────────────────────────────────────────────────── */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(17, 24, 39, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modalCard {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 36px 32px;
+  max-width: 520px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  border: 1px solid #f1f5f9;
+  animation: slideUp 0.25s ease-out;
+}
+
+.closeButton {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.modalAvatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: #faf5ff;
+  border: 1.5px solid #f3e8ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a855f7;
+  flex-shrink: 0;
+}
+
+.modalName {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 2px;
+}
+
+.modalRole {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #9333ea;
+}
+
+.modalBio {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.65;
+  margin-bottom: 22px;
+}
+
+.modalDetailSection {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 18px;
+  margin-bottom: 20px;
+}
+
+.modalDetailHeading {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.modalPills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ────────────────────────────────────────────────────────
+   RESPONSIVE STYLES
+   ──────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .managementGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .highlightsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .directorsGrid {
+    gap: 40px;
+  }
+
+  .managementGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .highlightsGrid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .modalCard {
+    padding: 28px 20px;
+  }
+}

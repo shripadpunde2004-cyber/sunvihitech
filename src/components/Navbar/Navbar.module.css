@@ -1,0 +1,345 @@
+/* ========================================
+   Navbar Styles
+   ======================================== */
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #ffffff;
+  border-bottom: 1px solid var(--color-border);
+  transition: box-shadow var(--transition-base);
+}
+
+.headerScrolled {
+  box-shadow: 0 2px 20px rgba(91, 31, 138, 0.12);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  height: 68px;
+  gap: 32px;
+}
+
+/* ─── Logo ─────────────────────────────── */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.logoText {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  letter-spacing: 2px;
+}
+
+/* ─── Desktop Nav ───────────────────────── */
+.desktopNav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-dark);
+  background: none;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: color var(--transition-fast), background var(--transition-fast);
+  white-space: nowrap;
+  font-family: var(--font-family);
+}
+
+.navLink:hover {
+  color: var(--color-primary);
+  background: rgba(91, 31, 138, 0.05);
+}
+
+.navLinkOpen {
+  color: var(--color-primary) !important;
+  background: #f8f6fb !important;
+  font-weight: 600;
+}
+
+.navLinkActive {
+  color: #9333ea !important;
+  border: 1px solid #d8b4fe !important;
+  background: #faf5ff !important;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* ─── Chevron ───────────────────────────── */
+.chevron {
+  transition: transform var(--transition-base);
+  flex-shrink: 0;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+/* ─── Dropdown Menu ─────────────────────── */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  min-width: 220px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 32px rgba(91, 31, 138, 0.12), 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid #ede9fe;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity var(--transition-base),
+    transform var(--transition-base),
+    visibility var(--transition-base);
+  z-index: 100;
+  padding: 6px;
+}
+
+.dropdownRich {
+  min-width: 290px;
+  padding: 8px;
+}
+
+.dropdownOpen {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdownItem {
+  display: block;
+  padding: 10px 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-body);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.dropdownItem:hover {
+  background: rgba(91, 31, 138, 0.06);
+  color: var(--color-primary);
+}
+
+.dropdownItemRich {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background var(--transition-fast);
+}
+
+.itemTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.3;
+  margin-bottom: 2px;
+  transition: color var(--transition-fast);
+}
+
+.itemSubtitle {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: #64748b;
+  line-height: 1.35;
+}
+
+.dropdownItemRich:hover {
+  background: #f8f6fb;
+}
+
+.dropdownItemRich:hover .itemTitle {
+  color: var(--color-primary);
+}
+
+/* ─── Login Button ──────────────────────── */
+.loginBtn {
+  flex-shrink: 0;
+  padding: 8px 22px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  border: 1.5px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  font-family: var(--font-family);
+  text-decoration: none;
+}
+
+.loginBtn:hover {
+  background: var(--color-primary);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ─── Hamburger (Mobile) ────────────────── */
+.hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  color: var(--color-text-dark);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.hamburger:hover {
+  background: rgba(91, 31, 138, 0.08);
+}
+
+/* ─── Mobile Menu ───────────────────────── */
+.mobileMenu {
+  display: none;
+  position: fixed;
+  top: 68px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform var(--transition-slow);
+  padding: 24px;
+  z-index: 999;
+}
+
+.mobileMenuOpen {
+  transform: translateX(0);
+}
+
+.mobileNavList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mobileNavItem {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mobileNavLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 14px 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-dark);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-family);
+  text-decoration: none;
+}
+
+.mobileDropdown {
+  list-style: none;
+  padding: 4px 0 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mobileDropdownItem {
+  display: block;
+  padding: 8px 4px;
+  font-size: 0.875rem;
+  color: var(--color-text-body);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.mobileDropdownItem:hover {
+  color: var(--color-primary);
+}
+
+.mobileDropdownItemRich {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 6px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 4px;
+}
+
+.mobileItemTitle {
+  font-size: 0.925rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.mobileItemSubtitle {
+  font-size: 0.775rem;
+  color: #64748b;
+  margin-top: 1px;
+}
+
+.mobileCta {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ─── Responsive ────────────────────────── */
+@media (max-width: 900px) {
+  .desktopNav {
+    display: none;
+  }
+
+  .loginBtn {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .mobileMenu {
+    display: block;
+  }
+}
